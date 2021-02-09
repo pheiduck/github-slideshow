@@ -10,3 +10,13 @@ updates:
   directory: "/"
   schedule:
     interval: "daily"
+
+- package-ecosystem: "npm"
+  directory: "/node_modules/reveal.js/package.json"
+  schedule:
+    interval: "daily"
+    
+- package-ecosystem: "npm"
+  directory: "/node_modules/reveal.js/plugin/multiplex/package.json"
+  schedule:
+    interval: "daily"
