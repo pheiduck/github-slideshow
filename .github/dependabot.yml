@@ -12,9 +12,3 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
-    
-      - package-ecosystem: "package-lock.json"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 10
