@@ -7,6 +7,6 @@ updates:
     interval: "daily"
 
 - package-ecosystem: "npm"
-  directory: "/github-slideshow"
+  directory: "/"
   schedule:
     interval: "daily"
