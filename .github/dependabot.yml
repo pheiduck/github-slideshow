@@ -5,3 +5,16 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+
+  # Keep npm dependencies up to date
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    
+      - package-ecosystem: "package-lock.json"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
