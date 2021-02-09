@@ -7,6 +7,6 @@ updates:
     interval: "daily"
 
 - package-ecosystem: "npm"
-  directory: "/"
+  directory: "/package-lock.json"
   schedule:
     interval: "daily"
