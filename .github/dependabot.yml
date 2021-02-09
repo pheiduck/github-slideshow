@@ -11,3 +11,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    # Raise all npm pull requests with custom labels
+    labels:
+      - "npm dependencies"
+      - "triage-board"
