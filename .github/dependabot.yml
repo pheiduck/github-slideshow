@@ -12,11 +12,11 @@ updates:
     interval: "daily"
 
 - package-ecosystem: "npm"
-  directory: "/node_modules/reveal.js/package.json"
+  directory: "/node_modules/reveal.js/"
   schedule:
     interval: "daily"
     
 - package-ecosystem: "npm"
-  directory: "/node_modules/reveal.js/plugin/multiplex/package.json"
+  directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
     interval: "daily"
