@@ -4,19 +4,19 @@ updates:
 - package-ecosystem: "bundler"
   directory: "/"
   schedule:
-    interval: "daily"
+    interval: "live"
 
-- package-ecosystem: "npm"
+- package-manager: "javascript"
   directory: "/"
   schedule:
-    interval: "daily"
+    interval: "live"
 
-- package-ecosystem: "npm"
+- package-manager: "javascript"
   directory: "/node_modules/reveal.js/"
   schedule:
-    interval: "daily"
+    interval: "live"
     
-- package-ecosystem: "npm"
+- package-manager: "javascript"
   directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
-    interval: "daily"
+    interval: "live"
