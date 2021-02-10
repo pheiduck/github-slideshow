@@ -9,14 +9,14 @@ updates:
 - package-manager: "javascript"
   directory: "/"
   schedule:
-    interval: "live"
+    interval: "daily"
 
 - package-manager: "javascript"
   directory: "/node_modules/reveal.js/"
   schedule:
-    interval: "live"
+    interval: "daily"
     
 - package-manager: "javascript"
   directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
-    interval: "live"
+    interval: "daily"
