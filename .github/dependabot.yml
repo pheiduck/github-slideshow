@@ -6,17 +6,17 @@ updates:
   schedule:
     interval: "daily"
 
-- package-ecosystem: "javascript"
+- package-ecosystem: "npm"
   directory: "/"
   schedule:
     interval: "daily"
 
-- package-ecosystem: "javascript"
+- package-ecosystem: "npm"
   directory: "/node_modules/reveal.js/"
   schedule:
     interval: "daily"
     
-- package-ecosystem: "javascript"
+- package-ecosystem: "npm"
   directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
     interval: "daily"
