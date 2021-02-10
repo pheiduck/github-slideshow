@@ -4,7 +4,7 @@ updates:
 - package-ecosystem: "bundler"
   directory: "/"
   schedule:
-    interval: "live"
+    interval: "daily"
 
 - package-manager: "javascript"
   directory: "/"
