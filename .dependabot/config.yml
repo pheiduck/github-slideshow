@@ -1,0 +1,17 @@
+version: 1
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/"
+    update_schedule: "live"
+
+  - package_manager: "javascript"
+    directory: "/"
+    update_schedule: "live"
+
+- package_manager: "javascript"
+  directory: "/node_modules/reveal.js/"
+  update_schedule: "live"
+    
+- package_manager: "javascript"
+  directory: "/node_modules/reveal.js/plugin/multiplex/"
+  update_schedule: "live"
