@@ -1,15 +1,41 @@
-name: CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: Gemer
+on: [push, pull_request]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:13
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
- 
-    - uses: actions/checkout@v2
-    - name: Ruby Gemer
-      uses: katungi/Ruby-Gemer@V0.1-alpha
+      - uses: actions/checkout@v2
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - uses: borales/actions-yarn@v2.3.0
+        with: 
+          cmd: install
+      - name: Build and run tests
+        env:
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          sudo gem install selenium-webdriver
+          gem install bundler
+          bundle update --conservative --jobs 4 --retry 3
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          bundle exec rails test
+          
