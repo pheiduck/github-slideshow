@@ -1,2 +1,0 @@
-- name: PackageCloud
-  uses: TykTechnologies/packagecloud-action@v1
