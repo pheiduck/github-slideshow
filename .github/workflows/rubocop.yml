@@ -23,6 +23,6 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle config set without 'default doc job cable storage ujs test db'
-        bundle install --deployment
+        bundle install --binstubs
     - name: Run RuboCop
       run: bundle exec rubocop --parallel
