@@ -22,6 +22,6 @@ jobs:
     - name: Install gems
       run: |
         bundle config path vendor/bundle
-        bundle install
+        bundle install && bundle install rubocop
     - name: Run RuboCop
       run: bundle exec rubocop --parallel
