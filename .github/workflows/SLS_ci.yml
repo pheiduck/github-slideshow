@@ -1,9 +1,0 @@
-- name: Perform Scan
-  uses: ShiftLeftSecurity/scan-action@master
-  with:
-    type: "credscan,javascrypt,ruby,html,depscan"
-
-    - uses: actions/upload-artifact@v2.2.2
-  with:
-    name: reports
-    path: reports
