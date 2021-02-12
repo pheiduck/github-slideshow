@@ -22,7 +22,6 @@ jobs:
     - name: Install gems
       run: |
         bundle config path vendor/bundle
-        bundle config set 'default doc job cable storage ujs test db'
         bundle install
     - name: Run RuboCop
       run: bundle exec rubocop --parallel
