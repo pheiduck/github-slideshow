@@ -267,7 +267,6 @@ GEM
     unicode-display_width (1.7.0)
     yell (2.2.2)
     zeitwerk (2.4.2)
-	rubcop (1.9.1)
 
 PLATFORMS
   ruby
