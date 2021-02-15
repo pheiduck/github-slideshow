@@ -1,6 +1,8 @@
 name: "Dependabot Automerge - Action"
 
 on:
+  schedule:
+    - cron: "*/5 * * * *"
   pull_request:
 
 jobs:
