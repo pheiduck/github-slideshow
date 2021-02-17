@@ -5,6 +5,9 @@ updates:
   directory: "/"
   schedule:
     interval: "daily"
+  allow:
+    # Allow both direct and indirect updates for all packages
+    - dependency-type: "all"
 
 - package-ecosystem: "npm"
   directory: "/"
@@ -15,8 +18,14 @@ updates:
   directory: "/node_modules/reveal.js/"
   schedule:
     interval: "daily"
+  allow:
+    # Allow both direct and indirect updates for all packages
+    - dependency-type: "all"
     
 - package-ecosystem: "npm"
   directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
     interval: "daily"
+  allow:
+    # Allow both direct and indirect updates for all packages
+    - dependency-type: "all"
