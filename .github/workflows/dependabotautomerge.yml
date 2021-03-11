@@ -11,17 +11,15 @@ jobs:
     steps:
       - name: automerge
         uses: pascalgn/automerge-action@v0.13.1
-        with:
-          script: |
-            github.pullRequests.createReview({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number,
-              event: 'APPROVE'
-            })
-            github.pullRequests.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number
-            })
-          github-token: ${{github.token}}
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "automerge,!work in progress"
+          MERGE_REMOVE_LABELS: "automerge"
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_RETRIES: "30"
+          MERGE_RETRY_SLEEP: "60000"
+          UPDATE_LABELS: ""
+          UPDATE_METHOD: "rebase"
+          UPDATE_RETRIES: "30"
+          UPDATE_RETRY_SLEEP: "60000"
