@@ -11,3 +11,5 @@ I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey t
 I'll meet you over there, can't wait to get started!
 
 This course is using the :sparkles: open source project [reveal.js](https://github.com/hakimel/reveal.js/). In some cases we’ve made changes to the history so it would behave during class, so head to the original project repo to learn more about the cool people behind this project.
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/pheiduck/github-slideshow.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/pheiduck/github-slideshow/alerts/)
