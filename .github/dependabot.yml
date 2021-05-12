@@ -7,21 +7,21 @@ updates:
     interval: "daily"
   allow:
     - dependency-type: "all"
-
+  open-pull-requests-limit: 100
 - package-ecosystem: "npm"
   directory: "/"
   schedule:
     interval: "daily"
   allow:
     - dependency-type: "all"    
-
+  open-pull-requests-limit: 100
 - package-ecosystem: "npm"
   directory: "/node_modules/reveal.js/"
   schedule:
     interval: "daily"
   allow:
     - dependency-type: "all"
-    
+  open-pull-requests-limit: 100
 - package-ecosystem: "npm"
   directory: "/node_modules/reveal.js/plugin/multiplex/"
   schedule:
